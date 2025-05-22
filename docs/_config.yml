@@ -217,14 +217,14 @@ defaults:
       related: true
   # _pages
   - scope:
-      path: "_pages"
+      path: ""
       type: pages
     values:
       layout: single
       author_profile: true
   # _docs
   - scope:
-      path: "_docs"
+      path: ""
       type: docs
     values:
       layout: single
@@ -237,7 +237,7 @@ defaults:
         nav: "docs"
   # _recipes
   - scope:
-      path: "_recipes"
+      path: ""
       type: recipes
     values:
       layout: single
@@ -246,7 +246,7 @@ defaults:
       comments: true
   # _pets
   - scope:
-      path: "_pets"
+      path: ""
       type: pets
     values:
       layout: single
@@ -255,7 +255,7 @@ defaults:
       comment: true
   # _portfolio
   - scope:
-      path: "_portfolio"
+      path: ""
       type: portfolio
     values:
       layout: single
