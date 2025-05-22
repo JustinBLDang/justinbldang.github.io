@@ -1,4 +1,9 @@
 ---
-layout: home
+layout: single
 author_profile: true
 ---
+{% for page in site.pages %}
+  <div>
+    {{page.name}}
+  </div>
+{% endfor %}
