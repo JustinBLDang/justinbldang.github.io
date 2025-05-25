@@ -2,7 +2,6 @@
 title: "About"
 layout: single
 author_profile: true
-permalink: /
 
 WebDevFeatureRow:
   - image_path: assets/images/Preview-Spotify-Widget.png
