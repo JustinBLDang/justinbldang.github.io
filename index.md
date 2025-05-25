@@ -2,6 +2,8 @@
 title: "About"
 excerpt: "Who is Justin?"
 last_modified_at: 2025-05-22
+layout: single
+author_profile: true
 
 WebDevFeatureRow:
   - image_path: assets/images/Preview-Spotify-Widget.png
@@ -79,6 +81,10 @@ I'm self-motivated and hard working. I'm proud of my work and am continuously im
 ### Embedded Systems
 
 {% include feature_row id="AiMlFeatureRow" %}
+
+### Embedded Systems
+
+{% include feature_row id="EmbSysFeatureRow" %}
 
 ### Embedded Systems
 
