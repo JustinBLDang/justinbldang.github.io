@@ -68,6 +68,6 @@ I'm self-motivated and hard working. I'm proud of my work and am continuously im
 
 {% include feature_row id="MainFeatureRow" %}
 
-### Games
+## Games
 
 {% include feature_row id="GameFeatureRow" %}
