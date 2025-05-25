@@ -77,7 +77,7 @@ I'm self-motivated and hard working. I'm proud of my work and am continuously im
 
 {% include feature_row id="WebDevFeatureRow" %}
 
-### AI / Machine Learning
+### AI and Machine Learning
 
 {% include feature_row id="AiMlFeatureRow" %}
 
