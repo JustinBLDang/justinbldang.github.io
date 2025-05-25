@@ -31,7 +31,7 @@ AiMlFeatureRow:
     btn_class: "btn--primary"
 
 ComputerResearchFeatureRow:
-- image_path: assets/images/Preview-Computer-Network-Research.png
+  - image_path: assets/images/Preview-Computer-Network-Research.png
     alt: "Expanding Upon Host-Client Topology"
     title: "Expanding Upon Host-Client Topology"
     excerpt: "Improves data integrity for host-client networks, scales with network size."
