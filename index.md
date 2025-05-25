@@ -3,7 +3,7 @@ title: "About"
 layout: single
 author_profile: true
 
-WebDevFeatureRow:
+MainFeatureRow:
   - image_path: assets/images/Preview-Spotify-Widget.png
     alt: "Display Current Track Spotify Widget"
     title: "Display Current Track Spotify Widget"
@@ -11,17 +11,13 @@ WebDevFeatureRow:
     url: "https://github.com/JustinBLDang/SE-Widgets/tree/main/Spotify%20-%20Overlay%20Current%20Track"
     btn_label: "Read More"
     btn_class: "btn--primary"
-
-EmbSysFeatureRow:
-  - image_path: assets/images/Preview-Arduino-Game.png
-    alt: "Man Vs. World"
-    title: "Arduino Game"
-    excerpt: "A jumping game using Arduino UNO"
-    url: "https://github.com/JustinBLDang/Man_vs_World-Arduino-UNO-Project/blob/main"
+  - image_path: assets/images/Preview-Computer-Network-Research.png
+    alt: "Expanding Upon Host-Client Topology"
+    title: "Expanding Upon Host-Client Topology"
+    excerpt: "Improves data integrity for host-client networks, scales with network size."
+    url: "https://github.com/JustinBLDang/Expanding-Upon-Host-Client-Topology"
     btn_label: "Read More"
     btn_class: "btn--primary"
-
-AiMlFeatureRow:
   - image_path: assets/images/Preview-Ai-Ml.png
     alt: "Ai/Ml Feature Generation"
     title: "Ai/Ml Feature Generation"
@@ -29,13 +25,11 @@ AiMlFeatureRow:
     url: "https://github.com/JustinBLDang/AI-ML-Feature-generation/tree/main"
     btn_label: "Read More"
     btn_class: "btn--primary"
-
-ComputerResearchFeatureRow:
-  - image_path: assets/images/Preview-Computer-Network-Research.png
-    alt: "Expanding Upon Host-Client Topology"
-    title: "Expanding Upon Host-Client Topology"
-    excerpt: "Improves data integrity for host-client networks, scales with network size."
-    url: "https://github.com/JustinBLDang/Expanding-Upon-Host-Client-Topology"
+  - image_path: assets/images/Preview-Arduino-Game.png
+    alt: "Man Vs. World"
+    title: "Arduino Game"
+    excerpt: "A jumping game using Arduino UNO"
+    url: "https://github.com/JustinBLDang/Man_vs_World-Arduino-UNO-Project/blob/main"
     btn_label: "Read More"
     btn_class: "btn--primary"
 
@@ -72,21 +66,7 @@ I'm self-motivated and hard working. I'm proud of my work and am continuously im
 
 ## Projects
 
-### Web Development
-
-{% include feature_row id="WebDevFeatureRow" %}
-
-### AI and Machine Learning
-
-{% include feature_row id="AiMlFeatureRow" %}
-
-### Embedded Systems
-
-{% include feature_row id="EmbSysFeatureRow" %}
-
-### Computer Networking Research
-
-{% include feature_row id="ComputerResearchFeatureRow" %}
+{% include feature_row id="MainFeatureRow" %}
 
 ### Games
 
