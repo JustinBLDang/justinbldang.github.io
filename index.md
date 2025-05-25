@@ -86,6 +86,10 @@ I'm self-motivated and hard working. I'm proud of my work and am continuously im
 
 {% include feature_row id="EmbSysFeatureRow" %}
 
-### Embedded Systems
+### Computer Networking Research
 
-{% include feature_row id="EmbSysFeatureRow" %}
+{% include feature_row id="ComputerResearchFeatureRow" %}
+
+### Games
+
+{% include feature_row id="GameFeatureRow" %}
