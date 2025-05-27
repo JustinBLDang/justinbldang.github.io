@@ -58,11 +58,11 @@ GameFeatureRow:
   
 toc: true
 ---
-I am a CS Instructor, I teach k-12 students about the fundamentals of programming and build projects HS students use to display in their portfolio. I am working on a ML rocket recovery simulator and VR Speech and Debate simulator for two of my students who will be applying to competitive schools like the top UC's and Ivy League universities. I've had to learn new tools(MLAgents(GAIL, Behavioral Cloning, Experiment Design), ChatGPT API, http-server, Reinforced Learning) to bring my students projects to life and to teach my students how they can use them.
+I am a CS Instructor, I teach k-12 students about the fundamentals of programming and build projects HS students use to display in their portfolio. I currently work on ML rocket recovery simulator and VR Speech and Debate simulator projects for my students who apply to competitive universities. I learn new tools*(MLAgents(GAIL, Behavioral Cloning, Experiment Design), ChatGPT API, http-server, Reinforced Learning)* with each student to bring their projects to life and to provide my students an understanding of the tools, project, and goal.
 
-Outside of work, I have a multi-disciplinary study. I started off in Game Development for Unity in HS, then went on to algorithms/embedded systems/AI/ML/Computer Networking in College. And finally, I'm working on web projects(Display Current Track(Spotify Widget) and Personal Website). I've never stuck to one area because I **like** solving problems. Since I've been exposed to so many fields, it was natural for me to explore a variety of problems. I'm experienced with learning new skills and studying.
+Outside of work, I have a multi-disciplinary study. I created work in Game Development in HS, algorithms/embedded systems/AI/ML/Computer Networking in College. Today, I am working on Web Development projects*(Display Current Track(Spotify Widget) and Personal Website)*. I've invested my time across different programming fields because problem solving methods have overlap. Learning about these has helped me bridge my understanding and help me in my current job, where I have to pick up new tools for every student project. 
 
-I'm self-motivated and hard working. I'm proud of my work and am continuously improving to reflect that.
+Because of my work environment and hobbies, I'm adaptable and quickly learn. Due to my work in many different fields, I'm confident I can solve a problem; its only a matter of time.
 
 ## Projects
 
