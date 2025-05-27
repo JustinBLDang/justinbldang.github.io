@@ -100,7 +100,7 @@ author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
   avatar           : 
   bio              : "CS Instructor/Project Lead and Spotify Widget Dev"
-  location         : 
+  location         : Irvine, CA
   links:
     # - label: "Made Mistakes"
     #   icon: "fas fa-fw fa-link"
@@ -108,13 +108,15 @@ author:
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   url: "https://twitter.com/mmistakes"
-    # - label: "GitHub"
-    #   icon: "fab fa-fw fa-github"
-    #   url: "https://github.com/mmistakes"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/JustinBLDang?tab=repositories"
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/mmistakes"
-
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/justin-bl-dang/"
 
 # Site Footer
 footer:
@@ -122,12 +124,15 @@ footer:
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   url: "https://twitter.com/mmistakes"
-    # - label: "GitHub"
-    #   icon: "fab fa-fw fa-github"
-    #   url: "https://github.com/mmistakes"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/JustinBLDang?tab=repositories"
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/mmistakes"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/justin-bl-dang/"
 
 
 # Reading Files
