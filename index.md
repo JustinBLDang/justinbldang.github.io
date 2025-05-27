@@ -5,6 +5,7 @@ author_profile: true
 
 MainFeatureRow:
   - image_path: assets/images/Preview-Spotify-Widget.png
+    image_caption: "2024-Present"
     alt: "Display Current Track Spotify Widget"
     title: "Display Current Track Spotify Widget"
     excerpt: "Displays Current Track in Customizable Interface"
@@ -12,6 +13,7 @@ MainFeatureRow:
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: assets/images/Preview-Computer-Network-Research.png
+    image_caption: "2024"
     alt: "Expanding Upon Host-Client Topology"
     title: "Expanding Upon Host-Client Topology"
     excerpt: "Improves data integrity for host-client networks, scales with network size."
@@ -19,6 +21,7 @@ MainFeatureRow:
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: assets/images/Preview-Ai-Ml.png
+    image_caption: "2024"
     alt: "Ai/Ml Feature Generation"
     title: "Ai/Ml Feature Generation"
     excerpt: "Maximizes the best feature set. Uses Breadth-First, Depth-First, and my Custom Search Algorithm"
@@ -26,6 +29,7 @@ MainFeatureRow:
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: assets/images/Preview-Arduino-Game.png
+    image_caption: "2024"
     alt: "Man Vs. World"
     title: "Arduino Game"
     excerpt: "A jumping game using Arduino UNO"
@@ -35,6 +39,7 @@ MainFeatureRow:
 
 GameFeatureRow:
   - image_path: assets/images/Preview-Game-Handy-Dandy.png
+    image_caption: "2024"
     alt: "Handy Dandy"
     title: "Handy Dandy"
     excerpt: "3D Story Puzzle Game."
@@ -42,6 +47,7 @@ GameFeatureRow:
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: assets/images/Preview-Game-Type-Island.png
+    image_caption: "2023-2024"
     alt: "Type Island"
     title: "Type Island"
     excerpt: "2D Speed Typing Game."
@@ -49,6 +55,7 @@ GameFeatureRow:
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: assets/images/Preview-Game-Macrocosm.png
+    image_caption: "2019-2021"
     alt: "Macrocosm"
     title: "Macrocosm"
     excerpt: "2D Survival Base Building"
