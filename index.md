@@ -65,7 +65,7 @@ GameFeatureRow:
   
 toc: true
 ---
-I am a **Computer Science Instructor** that teaches k-12 students about the fundamentals of programming. I am also a **Project Lead** that helps High School students build their portfolio. I currently work on a Machine Learning rocket recovery simulator and VR Speech and Debate simulator. I have a variety of tools I am currently using***(MLAgents(GAIL, Behavioral Cloning, Experiment Design), ChatGPT API, http-server, Reinforced Learning)*** as well as teaching with my students.
+I am a **Computer Science Instructor** that teaches k-12 students about the fundamentals of programming. I am also a **Project Lead** that helps High School students build their portfolio. I currently work on a ***Machine Learning rocket recovery simulator*** and ***VR Speech and Debate simulator***. I have a variety of tools I am currently using*(MLAgents(GAIL, Behavioral Cloning, Experiment Design), ChatGPT API, http-server, Reinforced Learning)* as well as teaching with my students.
 
 Outside of work, I build projects in different programming fields. I worked on projects in ***Game Development*** in HS and in University I worked on ***algorithms/embedded systems/AI/ML/Computer Networking***. I am now working on Web Development projects***(Display Current Track(Spotify Widget) and Personal Website)***. Problem solving has become one of my strong suites due to my work experience and projects. My projects in different programming fields has given me a broad set of problem solving methods, which has helped me in my current job to bring the ideas my students have to life.
 
