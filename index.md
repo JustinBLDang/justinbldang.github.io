@@ -69,7 +69,7 @@ I am a CS Instructor, I teach k-12 students about the fundamentals of programmin
 
 Outside of work, I have a multi-disciplinary study. I created work in Game Development in HS, algorithms/embedded systems/AI/ML/Computer Networking in College. I am now working on Web Development projects***(Display Current Track(Spotify Widget) and Personal Website)***. I invest in numerous programming fields because problem solving methods have overlap. Learning about these has helped me bridge my understanding and help me in my current job, where I have to pick up new tools for every student project. 
 
-Because of my work environment and hobbies, I'm adaptable and quickly learn. Due to my work in many different fields, I'm confident I can solve a problem; its only a matter of time.
+Because of my work environment and hobbies, I'm adaptable and quickly learn; confident I can solve any problem.
 
 ## Projects
 
