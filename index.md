@@ -65,11 +65,11 @@ GameFeatureRow:
   
 toc: true
 ---
-I am a **Computer Science Instructor** that teaches k-12 students about the fundamentals of programming. I am also a **Project Lead** that helps High School students build their portfolio. I currently work on a ***Machine Learning rocket recovery simulator*** and ***VR Speech and Debate simulator***. I am currently using *MLAgents(GAIL, Behavioral Cloning, Experiment Design), ChatGPT API, http-server, Reinforced Learning, Unity Engine* and creating lesson plans/teaching students how to use those tools.
+I am a **Computer Science Instructor** that teaches k-12 students about the fundamentals of programming. I am also a **Project Lead** that helps High School students build their portfolio. Some projects I am leading for students are a ***Machine Learning rocket recovery simulator*** and ***VR Speech and Debate simulator***. Throughout my work I use a variety of tools, currently I've been working with *MLAgents(GAIL, Behavioral Cloning, Experiment Design), ChatGPT API, http-server, Reinforced Learning, Unity Engine* and curating lesson plans to teach students how to use those tools.
 
-Outside of work, I build projects in different programming fields. I worked on projects in ***Game Development*** in HS and in University I worked on ***algorithms/embedded systems/AI/ML/Computer Networking***. I am now working on Web Development projects***(Display Current Track(Spotify Widget) and Personal Website)***. Problem solving is one of my strengths due to my work experience and projects. My projects in different programming fields has given me a broad set of problem solving methods, which has helped me in my current job to bring the ideas my students have to life.
+I worked on projects in ***Game Development*** in HS and in University I worked on ***algorithms/embedded systems/AI/ML/Computer Networking*** projects. Now, I'm working on Web Development projects***(Display Current Track(Spotify Widget) and Personal Website)***. These projects have made problem solving one of my biggest strengths, which has been a boon when working with unique projects that each of my students are excited to work on. I have been able to help my students, *who are new to programming*, learn complex topics and meet deadlines which resulted in qualification in competitions like [Coolest Projects](https://online.coolestprojects.org/cp-online-2025) and [Congressional App Challenge](https://www.congressionalappchallenge.us/).
 
-I'm adaptable and quickly learn because of my work environment, hobbies, and academic career.
+I like challenging myself to tackle problems and growing my skill set to prepare for larger obstacles. My work and projects are a way for me to continue doing so after graduating University.
 
 ## Projects
 
