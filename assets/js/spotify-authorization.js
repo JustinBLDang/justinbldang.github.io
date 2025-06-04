@@ -89,3 +89,4 @@ function renderTemplate(templateId, data = null) {
       }
     });
   });
+}
