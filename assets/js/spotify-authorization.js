@@ -62,7 +62,6 @@ async function redirectToSpotifyAuthorize() {
   window.open(authUrl.toString(), "test").focus(); // Redirect the user to the authorization server for login
 }
 
-// HTML Template Rendering with basic data binding - demoware only.
 function renderTemplate(templateId, data = null) {
   const template = document.getElementById(templateId);
   const clone = template.content.cloneNode(true);
