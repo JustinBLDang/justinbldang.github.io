@@ -1,0 +1,26 @@
+---
+title: "Spotify Authorization"
+layout: single
+permalink: /spotify-authorization/
+page_js: 
+    - /assets/js/spotify-authorization.js
+---
+
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div id="main"></div>
+  <div id="oauth"></div>
+
+  <template id="login">
+    <h1>Login</h1>
+    <button id="login-button" data-bind-onclick="loginWithSpotifyClick();"> Log in with Spotify </button>
+  </template>
+
+  <template id="logged-in-template">
+    <h1>Logged in as <span data-bind="display_name"></span></h1>
+  </template>
+</body>
+
+</html>
