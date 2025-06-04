@@ -7,7 +7,7 @@ const scope = 'user-read-currently-playing user-read-private user-read-email';
 const args = new URLSearchParams(window.location.search);
 const code = args.get('code');
 
-const template = document.getElementById(login);
+const template = document.getElementById("login");
 const clone = template.content.cloneNode(true);
 
 const elements = clone.querySelectorAll("*");
