@@ -14,6 +14,7 @@ const elements = clone.querySelectorAll("*");
 elements.forEach(element => {
     console.log("Element: " + element.id);
     const bindingAttrs = element.attributes.filter(a => a.name.startsWith("data-bind"));
+    console.log("BindingAttrs: " + bindingAttrs);
     bindingAttrs.forEach(attribute => {
         console.log("Attribute: " + attribute.name);
     })
