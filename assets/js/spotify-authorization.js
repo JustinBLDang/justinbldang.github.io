@@ -11,18 +11,13 @@ const template = document.getElementById("login");
 const clone = template.content.cloneNode(true);
 
 const elements = clone.querySelectorAll("*");
-elements.forEach(element => {
-    console.log("Element: " + element.id);
-    console.log("Element Attributes: " + element.attributes);
-    // const bindingAttrs = element.attributes.filter(a => a.name.startsWith("data-bind"));
-    // bindingAttrs.forEach(attribute => {
-    //     console.log("Attribute: " + attribute.name);
-    // })
-})
+for(const [key, value] of elements){
+  console.log(key, value);
+}
 // If we find a code, we're in a callback, do a token exchange
 // if (code) {
 //   // Display code for copy and paste
-//   renderTemplate("logged-in-template");
+//   renderTemplate("main", "logged-in-template");
 
 //   // Remove code from URL so we can refresh correctly.
 //   const url = new URL(window.location.href);
@@ -34,7 +29,7 @@ elements.forEach(element => {
 
 // // Otherwise we're not logged in, so render the login template
 // if (!currentToken.access_token) {
-//   renderTemplate("login");
+//   renderTemplate("main", "login");
 // }
 
 const generateRandomString = (length) => {
@@ -63,7 +58,7 @@ async function redirectToSpotifyAuthorize() {
   window.open(authUrl.toString(), "test").focus(); // Redirect the user to the authorization server for login
 }
 
-function renderTemplate(templateId, data = null) {
+function renderTemplate(targetId, templateId, data = null) {
   const template = document.getElementById(templateId);
   const clone = template.content.cloneNode(true);
 
@@ -89,4 +84,8 @@ function renderTemplate(templateId, data = null) {
       }
     });
   });
+
+  const target = document.getElementById(targetId);
+  target.innerHTML = "";
+  target.appendChild(clone);
 }
