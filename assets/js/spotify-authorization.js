@@ -13,7 +13,7 @@ const clone = template.content.cloneNode(true);
 const elements = clone.querySelectorAll("*");
 elements.forEach(element => {
     console.log("Element: " + element.id);
-    const bindingAttrs = [...element.attributes].filter(a => a.name.startsWith("data-bind"));
+    const bindingAttrs = element.attributes.filter(a => a.name.startsWith("data-bind"));
     bindingAttrs.forEach(attribute => {
         console.log("Attribute: " + attribute.name);
     })
