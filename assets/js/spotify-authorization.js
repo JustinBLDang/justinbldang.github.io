@@ -15,9 +15,9 @@ elements.forEach(element => {
     console.log("Element: " + element.id);
     const bindingAttrs = element.attributes.filter(a => a.name.startsWith("data-bind"));
     console.log("BindingAttrs: " + bindingAttrs);
-    bindingAttrs.forEach(attribute => {
-        console.log("Attribute: " + attribute.name);
-    })
+    // bindingAttrs.forEach(attribute => {
+    //     console.log("Attribute: " + attribute.name);
+    // })
 })
 // If we find a code, we're in a callback, do a token exchange
 // if (code) {
