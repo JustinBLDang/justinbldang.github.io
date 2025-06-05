@@ -11,7 +11,7 @@ const template = document.getElementById("login");
 const clone = template.content.cloneNode(true);
 
 const elements = clone.querySelectorAll("*");
-for(const [key, value] of elements){
+for(const [key, value] of [...elements]){
   console.log(key, value);
 }
 // If we find a code, we're in a callback, do a token exchange
