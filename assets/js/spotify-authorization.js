@@ -34,20 +34,19 @@ async function loginWithSpotifyClick() {
 }
 
 async function redirectToSpotifyAuthorize() {
-  window.location.assign("https://www.mozilla.org");
-  // currentState = utf8ToBase64(generateRandomString(16));
+  currentState = utf8ToBase64(generateRandomString(16));
 
-  // const authUrl = new URL(authorizationEndpoint)
-  // const params = {
-  //   response_type: 'code',
-  //   client_id: clientId,
-  //   scope: scope,
-  //   redirect_uri: redirectUrl,
-  //   state: currentState
-  // };
+  const authUrl = new URL(authorizationEndpoint)
+  const params = {
+    response_type: 'code',
+    client_id: clientId,
+    scope: scope,
+    redirect_uri: redirectUrl,
+    state: currentState
+  };
   
-  // authUrl.search = new URLSearchParams(params).toString();
-  // window.location.assign(authUrl.toString()); // Redirect the user to the authorization server for login
+  authUrl.search = new URLSearchParams(params).toString();
+  window.location.assign(authUrl.toString()); // Redirect the user to the authorization server for login
 }
 
 function renderTemplate(targetId, templateId, data = null) {
