@@ -23,26 +23,18 @@ else {
   renderTemplate("main", "login");
 }
 
-const generateRandomString = (length) => {
-  const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  const randomValues = crypto.getRandomValues(new Uint8Array(length));
-  return randomValues.reduce((acc, x) => acc + possible[x % possible.length], "");
-}
-
 async function loginWithSpotifyClick() {
   await redirectToSpotifyAuthorize();
 }
 
 async function redirectToSpotifyAuthorize() {
-  currentState = utf8ToBase64(generateRandomString(16));
 
   const authUrl = new URL(authorizationEndpoint)
   const params = {
     response_type: 'code',
     client_id: clientId,
     scope: scope,
-    redirect_uri: redirectUrl,
-    state: currentState
+    redirect_uri: redirectUrl
   };
   
   authUrl.search = new URLSearchParams(params).toString();
