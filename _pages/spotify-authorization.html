@@ -17,11 +17,19 @@ page_js:
     <center>
       <h1>Login To Spotify</h1>
       <button id="login-button" class="btn btn--primary " onclick="loginWithSpotifyClick()"> Log in with Spotify </button>
+      <span>
+        I am a **Computer Science Instructor**
+      </span>
     </center>
     
   </template>
 
-  <template id="logged-in-template">
+  <template id="logged-in-success-template">
+    <h1>Authentication Success</h1>
+    <p>Authorization Code: <span data-bind="login_state"></span></p>
+  </template>
+
+  <template id="logged-in-fail-template">
     <h1>Authentication <span data-bind="login_state"></span></h1>
   </template>
 </body>

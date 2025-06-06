@@ -3,24 +3,52 @@ const authorizationEndpoint = "https://accounts.spotify.com/authorize";
 const tokenEndpoint = "https://accounts.spotify.com/api/token";
 const scope = 'user-read-currently-playing user-read-private user-read-email';
 
-// On page load, try to fetch auth code from current browser search URL
+// On page load, fetch params
 const args = new URLSearchParams(window.location.search);
 const code = args.get('code');
+const error = args.get('error');
+const state = args.get('state');
 
 // If we find a code, we're in a callback, do a token exchange
+// TODO: add copy button to the auth code
 if (code) {
+  if(state != localStorage.getItem('state')){
+    throw new Error("Spotify Authorization returned incorrect state, aborting.");
+  }
+  
   // Display code for copy and paste
-  renderTemplate("main", "logged-in-template", {login_state: code});
+  renderTemplate("main", "logged-in-success-template", {login_state: code});
 
   // Remove code from URL so we can refresh correctly.
   const url = new URL(window.location.href);
   url.searchParams.delete("code");
+  url.searchParams.delete("state");
 
   const updatedUrl = url.search ? url.href : url.href.replace('?', '');
   window.history.replaceState({}, document.title, updatedUrl);
 }
 else {
-  renderTemplate("main", "login");
+  if(error){
+    renderTemplate("main", "logged-in-fail-template", {error_state: error});
+  }
+  else
+  {
+    renderTemplate("main", "login");
+  }
+}
+
+const utf8ToBase64 = (data) => {
+  const bytes = new TextEncoder().encode(data);
+  return btoa(String.fromCharCode(...new Uint8Array(bytes)))
+    .replace(/=/g, '')
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_');
+}
+
+const generateRandomString = (length) => {
+  const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const randomValues = crypto.getRandomValues(new Uint8Array(length));
+  return randomValues.reduce((acc, x) => acc + possible[x % possible.length], "");
 }
 
 async function loginWithSpotifyClick() {
@@ -28,13 +56,16 @@ async function loginWithSpotifyClick() {
 }
 
 async function redirectToSpotifyAuthorize() {
+  currentState = utf8ToBase64(generateRandomString(16));
+  localStorage.setItem('state', currentState);
 
   const authUrl = new URL(authorizationEndpoint)
   const params = {
     response_type: 'code',
     client_id: clientId,
     scope: scope,
-    redirect_uri: redirectUrl
+    redirect_uri: redirectUrl,
+    state: currentState
   };
   
   authUrl.search = new URLSearchParams(params).toString();
@@ -71,16 +102,21 @@ function renderTemplate(targetId, templateId, data = null) {
 const AssignDataBind = (element, property, data) => {
   try{
     switch(property){
-      case login_state:
+      case 'login_state':
         element[property] = data.login_state;
-        return true;
+        return;
+      case 'error_state':
+        element[property] = data.error_state;
+        return;
+      case 'innerHTML':
+        return;
       default:
         console.error(property + ": Property data assignment not supported.");
-        return false;
+        return;
     }
   }
   catch(error){
-    console.error(`Error binding ${data[property]} to ${targetProp}`, ex);
+    console.error(`Error binding ${data[property]} to ${property}(Does element/property exist?)`, error);
     return false;
   }
 }
