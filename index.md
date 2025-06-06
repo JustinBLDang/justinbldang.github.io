@@ -64,6 +64,7 @@ GameFeatureRow:
     btn_class: "btn--primary"
   
 toc: true
+toc_sticky: true
 ---
 I am a **Computer Science Instructor** that teaches k-12 students about the fundamentals of programming. I am also a **Project Lead** that helps High School students build their portfolio. Some projects I am leading for students are a ***Machine Learning rocket recovery simulator*** and ***VR Speech and Debate simulator***. Throughout my work I use a variety of tools, currently I've been working with *MLAgents(GAIL, Behavioral Cloning, Experiment Design), ChatGPT API, http-server, Reinforced Learning, Unity Engine* and curating lesson plans to teach students how to use those tools.
 
