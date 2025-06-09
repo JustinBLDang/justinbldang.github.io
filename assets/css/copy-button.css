@@ -24,4 +24,10 @@
 
 .copy-button-inline {
     padding: .2rem;
+    border: 2px solid rgb(78, 78, 78);
+    border-radius: 8px;
+    background: rgb(60, 60, 60);
+    color: rgb(233, 233, 233);
+    font-weight: bold;
+    cursor: pointer;
 }
