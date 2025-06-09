@@ -18,10 +18,13 @@
 }
 
 .copy-text-inline {
-  color: rgb(215, 215, 215);
+  color: rgb(220, 220, 220);
   overflow: auto;
 }
-
+.copy-text-inline>span {
+  font-weight: bold;
+  color: rgb(230, 230, 230);
+}
 .copy-button-inline {
     padding: .2rem;
     border: 2px solid rgb(78, 78, 78);
