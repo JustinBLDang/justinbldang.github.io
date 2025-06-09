@@ -1,0 +1,27 @@
+#login-button {
+  margin-bottom: 20px;
+}
+
+.copy-text-container {
+    display: flex;
+    column-gap: .5rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem 0;
+    border: 2px solid rgb(78, 78, 78);
+    border-radius: 8px;
+    background: rgb(20, 20, 20);
+    color: white;
+    width: fit-content;
+    height: fit-content;
+}
+
+.copy-text-inline {
+  color: rgb(215, 215, 215);
+  overflow: auto;
+}
+
+.copy-button-inline {
+    padding: .2rem;
+}

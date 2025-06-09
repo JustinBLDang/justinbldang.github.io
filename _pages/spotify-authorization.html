@@ -3,7 +3,9 @@ title: "Spotify Authorization"
 layout: single
 permalink: /spotify-authorization/
 page_js: 
-    - /assets/js/spotify-authorization.js
+  - /assets/js/spotify-authorization.js
+page_css:
+  - /assets/css/copy-button.js
 ---
 
 <!DOCTYPE html>
@@ -15,15 +17,14 @@ page_js:
 
   <template id="login">
     <center>
+      <center>
       <h1>Login To Spotify</h1>
       <button id="login-button" class="btn btn--primary " onclick="loginWithSpotifyClick()"> Log in with Spotify </button>
-      <div markdown=1>
-
-        I am a **Computer Science Instructor**
-
+      <div class="copy-text-container">
+        <p class="copy-text-inline">Authorization Code: 893472598072107510982375981275987235</p>
+        <button type="button" class="copy-button-inline btn">Copy Code</button>
       </div>
     </center>
-    
   </template>
 
   <template id="logged-in-success-template">
