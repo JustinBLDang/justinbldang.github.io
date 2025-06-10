@@ -47,9 +47,9 @@ else {
 }
 
 //#region Buttons
-async function CopyTextToClipboard(htmlElement){
+async function CopyTextToClipboard(text){
   try {
-    await navigator.clipboard.writeText(htmlElement.innerHTML);
+    await navigator.clipboard.writeText(text);
   }
   catch(error) {
     console.error(error);
