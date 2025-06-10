@@ -7,13 +7,17 @@ const authorizationEndpoint = "https://accounts.spotify.com/authorize";
 const scope = 'user-read-currently-playing user-read-private user-read-email';
 let currentState;
 
+window.addEventListener("load", () => {
+  OnPageLoad();
+
+});
+
+
 // On page load, fetch params
 const args = new URLSearchParams(window.location.search);
 const code = args.get('code');
 const error = args.get('error');
 const state = args.get('state');
-
-OnPageLoad();
 
 // If we find a code, we're in a callback, do a token exchange
 if (code) {
