@@ -1,7 +1,11 @@
+//#region htmlVariables
+let textElement, loginButtonElement, copyButtonElement;
+
+//#region Spotify Variables
 const redirectUrl = 'https://justinbldang.github.io/spotify-authorization/';             
 const authorizationEndpoint = "https://accounts.spotify.com/authorize";
-const tokenEndpoint = "https://accounts.spotify.com/api/token";
 const scope = 'user-read-currently-playing user-read-private user-read-email';
+let currentState;
 
 // On page load, fetch params
 const args = new URLSearchParams(window.location.search);
@@ -9,8 +13,9 @@ const code = args.get('code');
 const error = args.get('error');
 const state = args.get('state');
 
+OnPageLoad();
+
 // If we find a code, we're in a callback, do a token exchange
-// TODO: add copy button to the auth code
 if (code) {
   if(state != localStorage.getItem('state')){
     throw new Error("Spotify Authorization returned incorrect state, aborting.");
@@ -37,6 +42,18 @@ else {
   }
 }
 
+//#region Buttons
+async function CopyTextToClipboard(htmlElement){
+  try {
+    await navigator.clipboard.writeText(htmlElement.innerHTML);
+  }
+  catch(error) {
+    console.error(error);
+  }
+}
+//#endregion Buttons
+
+//#region Spotify Authorization
 const utf8ToBase64 = (data) => {
   const bytes = new TextEncoder().encode(data);
   return btoa(String.fromCharCode(...new Uint8Array(bytes)))
@@ -51,7 +68,7 @@ const generateRandomString = (length) => {
   return randomValues.reduce((acc, x) => acc + possible[x % possible.length], "");
 }
 
-async function loginWithSpotifyClick() {
+async function AuthorizeSpotifyLogin() {
   await redirectToSpotifyAuthorize();
 }
 
@@ -71,6 +88,20 @@ async function redirectToSpotifyAuthorize() {
   authUrl.search = new URLSearchParams(params).toString();
   window.location.assign(authUrl.toString()); // Redirect the user to the authorization server for login
 }
+//#endregion Spotify Authorization
+
+//#region Page Setup
+function OnPageLoad(){
+  textElement = document.getElementById("copy-text-element");
+  loginButtonElement = document.getElementById("login-button");
+  copyButtonElement = document.getElementById("copy-text-button");
+
+  //loginButtonElement.addEventListener("click", AuthorizeSpotifyLogin);
+  //copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(textElement.innerText); });
+
+  loginButtonElement.addEventListener("click", () => { console.log("Login"); });
+  copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(textElement.innerText); });
+}
 
 function renderTemplate(targetId, templateId, data = null) {
   const template = document.getElementById(templateId);
@@ -89,7 +120,8 @@ function renderTemplate(targetId, templateId, data = null) {
         element.removeAttribute(attribute.name);
       }
       catch (error) {
-        console.error("Unable to remove attribute " + attribute.name + " from " + element);
+        console.error(error);
+        console.log("Unable to remove attribute " + attribute.name + " from " + element);
       }
     });
   });
@@ -120,3 +152,4 @@ const AssignDataBind = (element, property, data) => {
     return false;
   }
 }
+//#endregion Page Setup
