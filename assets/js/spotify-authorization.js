@@ -104,7 +104,7 @@ function OnPageLoad(){
   //copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(textElement.innerText); });
 
   loginButtonElement.addEventListener("click", () => { console.log("Login"); });
-  copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(textElement.innerText); });
+  copyButtonElement.addEventListener("click", () => { console.log(textElement); CopyTextToClipboard(textElement.innerText); });
 }
 
 function renderTemplate(targetId, templateId, data = null) {
