@@ -100,11 +100,8 @@ function OnPageLoad(){
   loginButtonElement = document.getElementById("login-button");
   copyButtonElement = document.getElementById("copy-text-button");
 
-  //loginButtonElement.addEventListener("click", AuthorizeSpotifyLogin);
-  //copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(textElement.innerText); });
-
-  loginButtonElement.addEventListener("click", () => { console.log("Login"); });
-  copyButtonElement.addEventListener("click", () => { console.log(textElement); CopyTextToClipboard(textElement.innerText); });
+  loginButtonElement.addEventListener("click", AuthorizeSpotifyLogin);
+  copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(textElement.innerText); });
 }
 
 function renderTemplate(targetId, templateId, data = null) {
