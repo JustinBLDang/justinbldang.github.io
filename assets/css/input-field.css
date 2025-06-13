@@ -23,5 +23,8 @@ label {
   display: inline-block;
   width: 90px;
   text-align: right;
+}
+
+.vertical-align {
   vertical-align: middle;
 }
