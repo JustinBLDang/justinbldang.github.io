@@ -6,6 +6,7 @@ page_js:
   - /assets/js/spotify-authorization.js
 page_css:
   - /assets/css/copy-button.css
+  - /assets/css/input-field.css
 ---
 
 <!DOCTYPE html>
@@ -18,6 +19,8 @@ page_css:
   <template id="login">
     <center>
       <h1>Login To Spotify</h1>
+      <label for="client-id-input">Client ID:</label>
+      <input type="text" id="client-id-input" name="client-id-input" required />
       <button id="login-button" class="btn btn--primary"> Log in with Spotify </button>
       <div class="copy-text-container">
         <div class="copy-text-inline">Authorization Code:

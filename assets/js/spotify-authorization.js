@@ -1,5 +1,6 @@
 //#region htmlVariables
-let textElement, loginButtonElement, copyButtonElement;
+let textElement, loginButtonElement, copyButtonElement, clientIDElement;
+let clientId;
 
 //#region Spotify Variables
 const redirectUrl = 'https://justinbldang.github.io/spotify-authorization/';             
@@ -9,7 +10,6 @@ let currentState;
 
 window.addEventListener("load", () => {
   OnPageLoad();
-
 });
 
 
@@ -73,6 +73,7 @@ const generateRandomString = (length) => {
 }
 
 async function AuthorizeSpotifyLogin() {
+  clientId = clientIDElement.value;
   await redirectToSpotifyAuthorize();
 }
 
@@ -99,9 +100,10 @@ function OnPageLoad(){
   textElement = document.getElementById("copy-text-element");
   loginButtonElement = document.getElementById("login-button");
   copyButtonElement = document.getElementById("copy-text-button");
+  clientIDElement = document.getElementById("client-id-input");
 
   loginButtonElement.addEventListener("click", AuthorizeSpotifyLogin);
-  copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(textElement.innerText); });
+  copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(clientIDElement.value); });
 }
 
 function renderTemplate(targetId, templateId, data = null) {
