@@ -14,6 +14,8 @@ input:valid + span::after {
 .text-field {
   width: 40%;
   vertical-align: top;
+  border: 2px solid rgb(78, 78, 78);
+  border-radius: 8px;
 }
 
 label {
