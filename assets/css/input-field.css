@@ -22,9 +22,5 @@ label {
   /* To make sure that all label have the same size and are properly align */
   display: inline-block;
   width: 90px;
-  text-align: right;
-}
-
-.vertical-align {
-  vertical-align: middle;
+  text-align: text-top;
 }
