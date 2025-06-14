@@ -1,0 +1,30 @@
+.form-box {
+    border: 2px solid rgb(78, 78, 78);
+    padding: 0px 30% 0px;
+}
+
+input:invalid + span::after {
+  position: absolute;
+  vertical-align: middle;
+  content: "*";
+  padding-left: 5px;
+  color: rgb(177, 38, 38);
+  font-size: 1rem;
+}
+
+input:valid + span::after {
+  content: "";
+}
+
+.text-field {
+  width: 40%;
+  border: 2px solid rgb(78, 78, 78);
+  border-radius: 8px;
+}
+
+label {
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+  padding: 0.25em;   /* Align with default style minimal mistakes has for input tags */
+}
