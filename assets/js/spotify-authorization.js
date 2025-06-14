@@ -59,14 +59,6 @@ async function redirectToSpotifyAuthorize() {
 
 //#region Page Setup
 function OnPageLoad(){
-  textElement = document.getElementById("copy-text");
-  loginButtonElement = document.getElementById("login-button");
-  copyButtonElement = document.getElementById("copy-text-button");
-  clientIDElement = document.getElementById("client-id-input");
-
-  loginButtonElement.addEventListener("click", () => { AuthorizeSpotifyLogin(); });
-  copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(textElement.innerText); });
-
   // fetch params
   const args = new URLSearchParams(window.location.search);
   const code = args.get('code');
@@ -77,7 +69,7 @@ function OnPageLoad(){
     throw new Error("Spotify Authorization returned incorrect state, aborting.");
   }
 
-  // If we find a code, we're in a callback, do a token exchange
+  // In a callback, do a token exchange
   if (code) {
     // Display code for copy and paste
     renderTemplate("Authentication", "logged-in-success-template", {login_state: code});
@@ -103,6 +95,15 @@ function OnPageLoad(){
   }
 
   renderTemplate("Login", "login");
+
+  // Event Listeners, Element Assignment
+  textElement = document.getElementById("copy-text");
+  loginButtonElement = document.getElementById("login-button");
+  copyButtonElement = document.getElementById("copy-text-button");
+  clientIDElement = document.getElementById("client-id-input");
+
+  loginButtonElement.addEventListener("click", () => { AuthorizeSpotifyLogin(); });
+  copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(textElement.innerText); });
 }
 
 function renderTemplate(targetId, templateId, data = null) {
