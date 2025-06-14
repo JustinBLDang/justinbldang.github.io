@@ -155,7 +155,7 @@ const AssignDataBind = (element, property, data) => {
   }
 }
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   OnPageLoad();
 });
 //#endregion Page Setup
