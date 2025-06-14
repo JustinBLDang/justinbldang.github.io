@@ -63,7 +63,7 @@ async function redirectToSpotifyAuthorize() {
 
 //#region Page Setup
 function OnPageLoad(){
-  textElement = document.getElementById("copy-text-element");
+  textElement = document.getElementById("copy-text");
   loginButtonElement = document.getElementById("login-button");
   copyButtonElement = document.getElementById("copy-text-button");
   clientIDElement = document.getElementById("client-id-input");
@@ -71,20 +71,20 @@ function OnPageLoad(){
   loginButtonElement.addEventListener("click", AuthorizeSpotifyLogin);
   copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(textElement.innerText); });
 
-  // On page load, fetch params
+  // fetch params
   const args = new URLSearchParams(window.location.search);
   const code = args.get('code');
   const error = args.get('error');
   const state = args.get('state');
 
+  if(state != localStorage.getItem('state')){
+    throw new Error("Spotify Authorization returned incorrect state, aborting.");
+  }
+
   // If we find a code, we're in a callback, do a token exchange
   if (code) {
-    if(state != localStorage.getItem('state')){
-      throw new Error("Spotify Authorization returned incorrect state, aborting.");
-    }
-    
     // Display code for copy and paste
-    renderTemplate("main", "logged-in-success-template", {login_state: code});
+    renderTemplate("Authentication", "logged-in-success-template", {login_state: code});
 
     // Remove code from URL so we can refresh correctly.
     const url = new URL(window.location.href);
@@ -95,12 +95,18 @@ function OnPageLoad(){
     window.history.replaceState({}, document.title, updatedUrl);
   }
   else if(error){
-    renderTemplate("main", "logged-in-fail-template", {login_state: error});
+    renderTemplate("Authentication", "logged-in-fail-template", {login_state: error});
+    
+    // Remove code from URL so we can refresh correctly.
+    const url = new URL(window.location.href);
+    url.searchParams.delete("error");
+    url.searchParams.delete("state");
+
+    const updatedUrl = url.search ? url.href : url.href.replace('?', '');
+    window.history.replaceState({}, document.title, updatedUrl);
   }
-  else
-  {
-    renderTemplate("main", "login");
-  }
+
+  renderTemplate("Login", "login");
 }
 
 function renderTemplate(targetId, templateId, data = null) {
