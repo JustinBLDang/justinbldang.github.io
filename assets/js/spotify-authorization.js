@@ -12,40 +12,6 @@ window.addEventListener("load", () => {
   OnPageLoad();
 });
 
-
-// On page load, fetch params
-const args = new URLSearchParams(window.location.search);
-const code = args.get('code');
-const error = args.get('error');
-const state = args.get('state');
-
-// If we find a code, we're in a callback, do a token exchange
-if (code) {
-  if(state != localStorage.getItem('state')){
-    throw new Error("Spotify Authorization returned incorrect state, aborting.");
-  }
-  
-  // Display code for copy and paste
-  renderTemplate("main", "logged-in-success-template", {login_state: code});
-
-  // Remove code from URL so we can refresh correctly.
-  const url = new URL(window.location.href);
-  url.searchParams.delete("code");
-  url.searchParams.delete("state");
-
-  const updatedUrl = url.search ? url.href : url.href.replace('?', '');
-  window.history.replaceState({}, document.title, updatedUrl);
-}
-else {
-  if(error){
-    renderTemplate("main", "logged-in-fail-template", {error_state: error});
-  }
-  else
-  {
-    renderTemplate("main", "login");
-  }
-}
-
 //#region Buttons
 async function CopyTextToClipboard(text){
   try {
@@ -104,6 +70,37 @@ function OnPageLoad(){
 
   loginButtonElement.addEventListener("click", AuthorizeSpotifyLogin);
   copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(textElement.innerText); });
+
+  // On page load, fetch params
+  const args = new URLSearchParams(window.location.search);
+  const code = args.get('code');
+  const error = args.get('error');
+  const state = args.get('state');
+
+  // If we find a code, we're in a callback, do a token exchange
+  if (code) {
+    if(state != localStorage.getItem('state')){
+      throw new Error("Spotify Authorization returned incorrect state, aborting.");
+    }
+    
+    // Display code for copy and paste
+    renderTemplate("main", "logged-in-success-template", {login_state: code});
+
+    // Remove code from URL so we can refresh correctly.
+    const url = new URL(window.location.href);
+    url.searchParams.delete("code");
+    url.searchParams.delete("state");
+
+    const updatedUrl = url.search ? url.href : url.href.replace('?', '');
+    window.history.replaceState({}, document.title, updatedUrl);
+  }
+  else if(error){
+    renderTemplate("main", "logged-in-fail-template", {login_state: error});
+  }
+  else
+  {
+    renderTemplate("main", "login");
+  }
 }
 
 function renderTemplate(targetId, templateId, data = null) {

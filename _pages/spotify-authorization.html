@@ -6,7 +6,7 @@ page_js:
   - /assets/js/spotify-authorization.js
 page_css:
   - /assets/css/copy-button.css
-  - /assets/css/input-field.css
+  - /assets/css/form.css
 ---
 
 <!DOCTYPE html>
@@ -14,9 +14,35 @@ page_css:
 
 <body>
   <div id="main"></div>
-  <div id="oauth"></div>
 
   <template id="login">
+    <center>
+      <div class="form-box">
+        <h1>Login To Spotify</h1>
+        <div>
+          <label for="client-id-input">Client ID:</label>
+          <input type="text" id="client-id-input" class="text-field" name="client-id-input" required />
+          <span class="validity"></span>
+        </div>
+        <div>
+          <button id="login-button" class="btn btn--primary"> Log in with Spotify </button>
+        </div>
+      </div>
+    </center>
+  </template>
+
+  <template id="logged-in-success-template">
+    <center>
+    <h1>Authentication Success</h1>
+      <div class="copy-text-container">
+        <div class="copy-text-inline">Authorization Code: <span id="copy-text-element" data-bind="login_state"></span></div>
+        <button id="copy-text-button" class="copy-button-inline btn">Copy Code</button>
+      </div>
+    </center>
+  </template>
+
+  <template id="logged-in-fail-template">
+    <h1>Authentication Failed: <span data-bind="login_state"></span></h1>
     <center>
       <h1>Login To Spotify</h1>
       <div>
@@ -27,21 +53,7 @@ page_css:
       <div>
         <button id="login-button" class="btn btn--primary"> Log in with Spotify </button>
       </div>
-      <div class="copy-text-container">
-        <div class="copy-text-inline">Authorization Code:
-          <span id="copy-text-element">893472598072107510982375981275987235</span></div>
-        <button id="copy-text-button" class="copy-button-inline btn">Copy Code</button>
-      </div>
     </center>
-  </template>
-
-  <template id="logged-in-success-template">
-    <h1>Authentication Success</h1>
-    <p>Authorization Code: <span data-bind="login_state"></span></p>
-  </template>
-
-  <template id="logged-in-fail-template">
-    <h1>Authentication <span data-bind="login_state"></span></h1>
   </template>
 </body>
 
