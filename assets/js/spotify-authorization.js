@@ -8,10 +8,6 @@ const authorizationEndpoint = "https://accounts.spotify.com/authorize";
 const scope = 'user-read-currently-playing user-read-private user-read-email';
 let currentState;
 
-window.addEventListener("load", () => {
-  OnPageLoad();
-});
-
 //#region Buttons
 async function CopyTextToClipboard(text){
   try {
@@ -158,4 +154,8 @@ const AssignDataBind = (element, property, data) => {
     return false;
   }
 }
+
+window.addEventListener("load", () => {
+  OnPageLoad();
+});
 //#endregion Page Setup
