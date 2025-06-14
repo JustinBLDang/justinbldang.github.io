@@ -64,7 +64,7 @@ function OnPageLoad(){
   copyButtonElement = document.getElementById("copy-text-button");
   clientIDElement = document.getElementById("client-id-input");
 
-  loginButtonElement.addEventListener("click", AuthorizeSpotifyLogin);
+  loginButtonElement.addEventListener("click", () => { AuthorizeSpotifyLogin(); });
   copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(textElement.innerText); });
 
   // fetch params
