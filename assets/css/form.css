@@ -8,13 +8,14 @@
 
 input {
   grid-area: input;
-  width: min(80%, auto);
+  width: auto;
   border: 2px solid rgb(78, 78, 78);
   padding: 5px;
   border-radius: 8px;
 }
 
 input:invalid + span::after {
+  grid-area: required;
   position: absolute;
   vertical-align: middle;
   content: "*";
@@ -38,5 +39,5 @@ label {
 
 .field {
   display: grid;
-  grid-template: "label input" 1rem / 90px 1fr;
+  grid-template: "label input required" 1rem / 90px 1fr 1fr;
 }
