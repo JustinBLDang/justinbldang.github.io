@@ -39,5 +39,5 @@ label {
 
 .field {
   display: grid;
-  grid-template: "label input required" 1rem / 90px 1fr 1fr;
+  grid-template: "label input required" auto / 90px 1fr auto;
 }
