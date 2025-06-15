@@ -1,15 +1,17 @@
 .form-box {
-    border: 2px solid rgb(78, 78, 78);
-    padding: 1rem;
-    margin: 0px auto;
-    width: max(70%, 400px);
+  border: 2px solid rgb(78, 78, 78);
+  padding: 1rem;
+  margin: 0px auto;
+  width: max(70%, 400px);
+  border-radius: 8px;
 }
 
 input {
-    box-sizing: border-box;
-    width: 100%;
-    border: solid #5b6dcd 10px;
-    padding: 5px;
+  grid-area: input;
+  width: min(80%, auto);
+  border: 2px solid rgb(78, 78, 78);
+  padding: 5px;
+  border-radius: 8px;
 }
 
 input:invalid + span::after {
@@ -25,16 +27,16 @@ input:valid + span::after {
   content: "";
 }
 
-.text-field {
-  border: 2px solid rgb(78, 78, 78);
-  box-sizing: border-box;
-  border-radius: 8px;
-}
-
 label {
   display: inline-block;
+  grid-area: label;
   width: 90px;
   text-align: right;
   vertical-align: top;
   padding: 0.25em;   /* Align with default style minimal mistakes has for input tags */
+}
+
+.field {
+  display: grid;
+  grid-template: "label input" 1rem / 90px 1fr;
 }
