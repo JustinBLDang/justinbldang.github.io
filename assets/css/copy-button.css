@@ -17,15 +17,15 @@
     height: fit-content;
 }
 
-.copy-text-label {
+.copy-text-container label {
   color: rgb(220, 220, 220);
   overflow: auto;
 }
-.copy-text-inline>span {
+.copy-text-container .copy-text>span {
   font-weight: bold;
   color: rgb(230, 230, 230);
 }
-.copy-button-inline {
+.copy-text-container button {
     padding: 0.25em;
     border: 2px solid rgb(78, 78, 78);
     border-radius: 8px;
