@@ -103,7 +103,7 @@ function OnPageLoad(){
   clientIDElement = document.getElementById("client-id-input");
 
   loginButtonElement.addEventListener("click", () => { AuthorizeSpotifyLogin(); });
-  copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(textElement.innerText); });
+  if(copyButtonElement){ copyButtonElement.addEventListener("click", () => { CopyTextToClipboard(textElement.innerText); }); }
 }
 
 function renderTemplate(targetId, templateId, data = null) {
