@@ -117,8 +117,12 @@ function renderTemplate(targetId, templateId, data = null) {
     attributes.forEach(attribute => {
       const target = attribute.name.replace(/data-bind-/, "").replace(/data-bind/, "");
       const targetProp = target === "" ? "innerHTML" : target;
+      console.log("target: " + target + "\ntargetProp: " + targetProp); // DEBUG
 
       try{
+        console.log("element: " + element); // DEBUG
+        console.log("data: " + data);       // DEBUG
+        console.log("Assigning " + data + " to " + element[targetProp]);       // DEBUG
         AssignDataBind(element, targetProp, data);
         element.removeAttribute(attribute.name);
       }
