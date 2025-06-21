@@ -1,7 +1,7 @@
 .form-box {
   border: 2px solid rgb(78, 78, 78);
   padding: 1rem;
-  margin: 0px auto;
+  margin-bottom: 1rem;
   width: max(70%, 400px);
   border-radius: 8px;
 }

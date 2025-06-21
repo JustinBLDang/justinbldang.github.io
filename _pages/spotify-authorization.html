@@ -5,7 +5,7 @@ permalink: /spotify-authorization/
 page_js: 
   - /assets/js/spotify-authorization.js
 page_css:
-  - /assets/css/copy-button.css
+  - /assets/css/copy-item.css
   - /assets/css/form.css
 ---
 
@@ -14,10 +14,10 @@ page_css:
 <body>
   <div id="Authentication"></div>
   <center>
-  <h1>Authentication Success</h1>
-    <div class="copy-text-container">
+  <div>Authentication Success</div>
+    <div class="copy-container">
       <label>Authorization Code: <span id="copy-text" data-bind="login_state"></span></label>
-      <button id="copy-text-button">Copy Code</button>
+      <button id="copy-button">Copy Code</button>
     </div>
   </center>
   <div id="Login"></div>

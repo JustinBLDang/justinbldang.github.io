@@ -1,0 +1,37 @@
+#login-button {
+  margin-bottom: 20px;
+}
+
+.copy-container {
+  display: flex;
+  column-gap: .5rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25em;
+  border: 2px solid rgb(78, 78, 78);
+  border-radius: 8px;
+  background: rgb(20, 20, 20);
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 1rem;
+}
+
+.copy-container label {
+  color: rgb(220, 220, 220);
+  overflow: auto;
+}
+.copy-container .copy-text>span {
+  font-weight: bold;
+  color: rgb(230, 230, 230);
+}
+.copy-container button {
+    padding: 0.25em;
+    border: 2px solid rgb(78, 78, 78);
+    border-radius: 8px;
+    background: rgb(60, 60, 60);
+    color: rgb(233, 233, 233);
+    font-weight: bold;
+    cursor: pointer;
+}
