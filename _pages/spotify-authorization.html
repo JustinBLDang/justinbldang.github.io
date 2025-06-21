@@ -13,13 +13,6 @@ page_css:
 <html>
 <body>
   <div id="Authentication"></div>
-  <center>
-  <div>Authentication Success</div>
-    <div class="copy-container">
-      <label>Authorization Code: <span id="copy-text" data-bind="login_state"></span></label>
-      <button id="copy-button">Copy Code</button>
-    </div>
-  </center>
   <div id="Login"></div>
 
   <template id="login">
@@ -40,10 +33,10 @@ page_css:
 
   <template id="logged-in-success-template">
     <center>
-    <h1>Authentication Success</h1>
-      <div class="copy-text-container">
+    <div>Authentication Success</div>
+      <div class="copy-container">
         <label>Authorization Code: <span id="copy-text" data-bind="login_state"></span></label>
-        <button id="copy-text-button">Copy Code</button>
+        <button id="copy-button">Copy Code</button>
       </div>
     </center>
   </template>
