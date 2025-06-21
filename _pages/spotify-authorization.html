@@ -11,7 +11,6 @@ page_css:
 
 <!DOCTYPE html>
 <html>
-
 <body>
   <div id="Authentication"></div>
   <div id="Login"></div>
@@ -19,7 +18,7 @@ page_css:
   <template id="login">
     <center>
       <div class="form-box">
-        <h1>Login To Spotify</h1>
+        <h1>App Authorization</h1>
         <div class="field">
           <label for="client-id-input">Client ID:</label>
           <input type="text" id="client-id-input" class="text-field" name="client-id-input" required />
@@ -43,8 +42,9 @@ page_css:
   </template>
 
   <template id="logged-in-fail-template">
-    <h1>Authentication Failed: <span data-bind="login_state"></span></h1>
+    <center>
+      <h1>Authentication Failed: <span data-bind="login_state"></span></h1>
+    </center>
   </template>
 </body>
-
 </html>

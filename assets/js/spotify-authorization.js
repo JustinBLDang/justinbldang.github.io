@@ -5,7 +5,7 @@ let clientId;
 //#region Spotify Variables
 const redirectUrl = 'https://justinbldang.github.io/spotify-authorization/';             
 const authorizationEndpoint = "https://accounts.spotify.com/authorize";
-const scope = 'user-read-currently-playing user-read-private user-read-email';
+const scope = 'user-read-currently-playing';
 let currentState;
 
 //#region Buttons
