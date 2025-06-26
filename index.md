@@ -66,10 +66,7 @@ GameFeatureRow:
 toc: true
 toc_sticky: true
 ---
-I am a **Computer Science Instructor** that teaches k-12 students about the fundamentals of programming. I am also a **Project Lead** that helps High School students build their portfolio. Some projects I am leading for students are a ***Machine Learning rocket recovery simulator*** and ***VR Speech and Debate simulator***. I've been working with *MLAgents(GAIL, Behavioral Cloning, Experiment Design), ChatGPT API, http-server, Reinforced Learning, Unity Engine* and curating lesson plans to teach students how to use those tools.
-
-I worked on projects in ***Game Development*** in HS and in University I worked on ***algorithms/embedded systems/AI/ML/Computer Networking*** projects. Now, I'm working on ***Web Development*** projects *(Display Current Track(Spotify Widget) and Personal Website)*. These projects have made problem solving one of my biggest strengths, which has brought success to many of my students in competitions and university applications. I do this by curating lessons/information to student preferences, scheduling their work, and teaching them  how to display their understanding well enough to compete in competions like the [Coolest Projects](https://online.coolestprojects.org/cp-online-2025) and [Congressional App Challenge](https://www.congressionalappchallenge.us/).
-
+I am a **Computer Science Instructor** that teaches k-12 students about the fundamentals of programming. I am also a **Project Lead** that helps High School students build their portfolio. 
 ## Projects
 
 {% include feature_row id="MainFeatureRow" %}
