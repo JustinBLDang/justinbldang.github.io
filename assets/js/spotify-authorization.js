@@ -1,4 +1,4 @@
-//#region htmlVariables
+//#region HTML Variables
 let textElement, loginButtonElement, copyButtonElement, clientIDElement;
 let clientId;
 
@@ -7,6 +7,9 @@ const redirectUrl = 'https://justinbldang.github.io/spotify-authorization/';
 const authorizationEndpoint = "https://accounts.spotify.com/authorize";
 const scope = 'user-read-currently-playing';
 let currentState;
+
+//#region Misc Variables
+let recievedError = false;
 
 //#region Buttons
 async function CopyTextToClipboard(text){
@@ -65,22 +68,10 @@ function OnPageLoad(){
   const error = args.get('error');
   const state = args.get('state');
 
-  if(state != localStorage.getItem('state')){
-    throw new Error("Spotify Authorization returned incorrect state, aborting.");
-  }
-
-  // In a callback, do a token exchange
-  if (code) {
-    // Display code for copy and paste
-    renderTemplate("Authentication", "logged-in-success-template", {login_state: code});
-
-    // Remove code from URL so we can refresh correctly.
-    const url = new URL(window.location.href);
-    url.searchParams.delete("code");
-    url.searchParams.delete("state");
-
-    const updatedUrl = url.search ? url.href : url.href.replace('?', '');
-    window.history.replaceState({}, document.title, updatedUrl);
+  // Callback handling
+  if(code && state != localStorage.getItem('state')){
+    console.error("Spotify Authorization returned incorrect state, aborting.");
+    renderTemplate("Authentication", "logged-in-fail-template", {login_state: "Spotify's response was invalid."});
   }
   else if(error){
     renderTemplate("Authentication", "logged-in-fail-template", {login_state: error});
@@ -88,6 +79,18 @@ function OnPageLoad(){
     // Remove code from URL so we can refresh correctly.
     const url = new URL(window.location.href);
     url.searchParams.delete("error");
+    url.searchParams.delete("state");
+
+    const updatedUrl = url.search ? url.href : url.href.replace('?', '');
+    window.history.replaceState({}, document.title, updatedUrl);
+  }
+  else if(code) {
+    // Display code for copy and paste
+    renderTemplate("Authentication", "logged-in-success-template", {login_state: code});
+
+    // Remove code from URL so we can refresh correctly.
+    const url = new URL(window.location.href);
+    url.searchParams.delete("code");
     url.searchParams.delete("state");
 
     const updatedUrl = url.search ? url.href : url.href.replace('?', '');
