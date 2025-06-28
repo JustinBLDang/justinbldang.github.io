@@ -71,10 +71,10 @@ function OnPageLoad(){
   // Callback handling
   if(code && state != localStorage.getItem('state')){
     console.error("Spotify Authorization returned incorrect state, aborting.");
-    renderTemplate("Authentication", "logged-in-fail-template", {login_state: "Spotify's response was invalid."});
+    renderTemplate("Authentication", "logged-in-fail-template", {error_state: "Spotify's response was invalid."});
   }
   else if(error){
-    renderTemplate("Authentication", "logged-in-fail-template", {login_state: error});
+    renderTemplate("Authentication", "logged-in-fail-template", {error_state: error});
     
     // Remove code from URL so we can refresh correctly.
     const url = new URL(window.location.href);
@@ -120,16 +120,8 @@ function renderTemplate(targetId, templateId, data = null) {
     attributes.forEach(attribute => {
       const target = attribute.name.replace(/data-bind-/, "").replace(/data-bind/, "");
       const targetProp = target === "" ? "innerHTML" : target;
-      console.log("target: " + target + "\ntargetProp: " + targetProp); // DEBUG
 
       try{
-        console.log("element: " + element); // DEBUG
-        console.log("data: " + data);       // DEBUG
-        // DEBUG
-        for (const [key, value] of Object.entries(data)) {
-          console.log(`${key}: ${value}`);
-        }
-        console.log("Assigning " + data + " to " + element[targetProp]);       // DEBUG
         AssignDataBind(element, targetProp, data);
         element.removeAttribute(attribute.name);
       }
@@ -147,6 +139,7 @@ function renderTemplate(targetId, templateId, data = null) {
 
 const AssignDataBind = (element, property, data) => {
   try{
+    console.log("Assigning Data...\n" + element[property] + " -> " + data.login_state); // DEBUG
     switch(property){
       case 'login_state':
         element[property] = data.login_state;
