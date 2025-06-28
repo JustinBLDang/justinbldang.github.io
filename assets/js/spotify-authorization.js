@@ -122,7 +122,7 @@ function renderTemplate(targetId, templateId, data = null) {
       const targetProp = target === "" ? "innerHTML" : target;
 
       try{
-        AssignDataBind(element, targetProp, data);
+        AssignDataBind(element, targetProp, target, data);
         element.removeAttribute(attribute.name);
       }
       catch (error) {
@@ -137,26 +137,22 @@ function renderTemplate(targetId, templateId, data = null) {
   target.appendChild(clone);
 }
 
-const AssignDataBind = (element, property, data) => {
+const AssignDataBind = (element, property, targetData, data) => {
   try{
-    console.log("Assigning Data...\n" + element[property] + " -> " + data.login_state); // DEBUG
-    switch(property){
+    switch(targetData){
       case 'login_state':
         element[property] = data.login_state;
         return;
       case 'error_state':
         element[property] = data.error_state;
         return;
-      case 'innerHTML':
-        return;
       default:
-        console.error(property + ": Property data assignment not supported.");
+        console.error(targetData + ": Property data assignment not supported.");
         return;
     }
   }
   catch(error){
-    console.error(`Error binding ${data[property]} to ${property}(Does element/property exist?)`, error);
-    return false;
+    console.error(`Error binding ${data[property]} to ${property}(Does element/property exist?)\n` + error);
   }
 }
 
