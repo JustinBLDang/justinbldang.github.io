@@ -125,6 +125,7 @@ function renderTemplate(targetId, templateId, data = null) {
       try{
         console.log("element: " + element); // DEBUG
         console.log("data: " + data);       // DEBUG
+        data.forEach((item) => { console.log(item)});
         console.log("Assigning " + data + " to " + element[targetProp]);       // DEBUG
         AssignDataBind(element, targetProp, data);
         element.removeAttribute(attribute.name);
