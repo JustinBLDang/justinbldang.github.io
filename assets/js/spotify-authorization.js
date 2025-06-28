@@ -122,7 +122,7 @@ function renderTemplate(targetId, templateId, data = null) {
       const targetProp = target === "" ? "innerHTML" : target;
 
       try{
-        AssignDataBind(element, targetProp, target, data);
+        AssignDataBind(element, targetProp, attribute.value, data);
         element.removeAttribute(attribute.name);
       }
       catch (error) {
