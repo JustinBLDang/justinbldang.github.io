@@ -24,7 +24,7 @@
   white-space: nowrap;
   cursor: default;
 }
-.copy-container .copy-text {
+.copy-container #copy-text {
   font-weight: bold;
   color: rgb(230, 230, 230);
 }
