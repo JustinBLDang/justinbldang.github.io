@@ -13,14 +13,16 @@
   border-radius: 8px;
   background: rgb(20, 20, 20);
   color: white;
-  width: fit-content;
+  width: auto;
   height: fit-content;
   margin-bottom: 1rem;
 }
 
 .copy-container label {
-  color: rgb(220, 220, 220);
+  color: rgb(157, 157, 157);
   overflow: auto;
+  white-space: nowrap;
+  cursor: default;
 }
 .copy-container .copy-text>span {
   font-weight: bold;
@@ -33,5 +35,6 @@
     background: rgb(60, 60, 60);
     color: rgb(233, 233, 233);
     font-weight: bold;
+    white-space: nowrap;
     cursor: pointer;
 }
