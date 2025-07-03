@@ -139,20 +139,10 @@ function renderTemplate(targetId, templateId, data = null) {
 
 const AssignDataBind = (element, property, targetData, data) => {
   try{
-    switch(targetData){
-      case 'login_state':
-        element[property] = data.login_state;
-        return;
-      case 'error_state':
-        element[property] = data.error_state;
-        return;
-      default:
-        console.error(targetData + ": Property data assignment not supported.");
-        return;
-    }
+    element[property] = data[targetData];
   }
   catch(error){
-    console.error(`Error binding ${data[property]} to ${property}(Does element/property exist?)\n` + error);
+    console.error(`(AssignDataBind) Error binding data(Does element/property exist?)\n` + error);
   }
 }
 
