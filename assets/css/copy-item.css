@@ -13,13 +13,14 @@
   border-radius: 8px;
   background: rgb(20, 20, 20);
   color: white;
-  width: auto;
+  width: max(70%, 400px);
   height: fit-content;
   margin-bottom: 1rem;
 }
 
 .copy-container label {
   color: rgb(157, 157, 157);
+  margin-bottom: 0;
   overflow: auto;
   white-space: nowrap;
   cursor: default;

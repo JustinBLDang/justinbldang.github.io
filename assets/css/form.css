@@ -4,6 +4,7 @@
   margin-bottom: 1rem;
   width: max(70%, 400px);
   border-radius: 8px;
+  background: rgb(20, 20, 20);
 }
 
 .form-box input {
