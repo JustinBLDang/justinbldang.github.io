@@ -8,9 +8,6 @@ const authorizationEndpoint = "https://accounts.spotify.com/authorize";
 const scope = 'user-read-currently-playing';
 let currentState;
 
-//#region Misc Variables
-let recievedError = false;
-
 //#region Buttons
 async function CopyTextToClipboard(text){
   try {
