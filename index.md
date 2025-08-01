@@ -66,7 +66,7 @@ GameFeatureRow:
 toc: true
 toc_sticky: true
 ---
-I am a **Computer Science Instructor** that teaches k-12 students about the fundamentals of programming. I am also a **Project Lead** that helps High School students build their portfolio by helping them create Machine Learning or OpenAI projects. 
+I am a **Computer Science Instructor** that teaches k-12 students about the fundamentals of programming. I am also a **Project Lead** that helps High School students build their portfolio by helping them create Machine Learning or OpenAI projects. Projects I am currently leading are *Machine Learning Rocket Recovery Simulator* and *VR Speech and Debate Simulator with OpenAI integration*.
 ## Projects
 
 {% include feature_row id="MainFeatureRow" %}
