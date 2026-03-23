@@ -66,7 +66,7 @@ GameFeatureRow:
 toc: true
 toc_sticky: true
 ---
-I am currently working at Computacenter as a Material Master Coordinator I was a **Computer Science Instructor** that teaches k-12 students about the fundamentals of programming. I was also a **Project Lead** for two projects at Coding Minds: *Machine Learning Rocket Recovery Simulator* and *VR Speech and Debate Simulator with OpenAI integration*. I am still actively adding to my current spotify project as the foundation I have has become very fun to think and add new things.
+I am currently working at Computacenter as a Material Master Coordinator I was a **Computer Science Instructor** that taught k-12 students about the fundamentals of programming. I was also a **Project Lead** for two projects at Coding Minds: *Machine Learning Rocket Recovery Simulator* and *VR Speech and Debate Simulator with OpenAI integration*. I am still actively adding to my current spotify project as the foundation I have has become very fun to think and add new things.
 ## Projects
 
 {% include feature_row id="MainFeatureRow" %}
