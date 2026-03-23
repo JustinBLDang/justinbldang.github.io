@@ -99,7 +99,7 @@ analytics:
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
   avatar           : 
-  bio              : "CS Instructor/Project Lead and Spotify Widget Dev"
+  bio              : "Material Coordinator, CS Instructor/Project Lead, and Spotify Widget Dev"
   location         : Irvine, CA
   links:
     # - label: "Made Mistakes"
