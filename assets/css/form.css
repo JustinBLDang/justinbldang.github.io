@@ -35,10 +35,10 @@
   width: 90px;
   text-align: right;
   vertical-align: top;
-  padding: 0.25em;   /* Align with default style minimal mistakes has for input tags */
+  padding: 0.25em 0.25em 0.25em 0;   /* Align with default style minimal mistakes has for input tags */
 }
 
 .form-box .field {
   display: grid;
-  grid-template: "label input required" auto / 8rem 1fr auto;
+  grid-template: "label input required" auto / auto 1fr auto;
 }
