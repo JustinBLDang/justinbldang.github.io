@@ -16,7 +16,7 @@ MainFeatureRow:
     image_caption: "2024"
     alt: "Expanding Upon Host-Client Topology"
     title: "Expanding Upon Host-Client Topology"
-    excerpt: "Improves data integrity for host-client networks, scales with network size."
+    excerpt: "Improve data integrity for host-client networks."
     url: "https://github.com/JustinBLDang/Expanding-Upon-Host-Client-Topology"
     btn_label: "Read More"
     btn_class: "btn--primary"
