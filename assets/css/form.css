@@ -40,5 +40,5 @@
 
 .form-box .field {
   display: grid;
-  grid-template: "label input required" auto / 90px 1fr auto;
+  grid-template: "label input required" auto / 8rem 1fr auto;
 }
