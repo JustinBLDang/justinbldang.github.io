@@ -36,6 +36,31 @@ MainFeatureRow:
     url: "https://github.com/JustinBLDang/Man_vs_World-Arduino-UNO-Project/blob/main"
     btn_label: "Read More"
     btn_class: "btn--primary"
+  - image_path: assets/images/Preview-Flix.png
+    image_caption: "2022"
+    alt: "Netflix App"
+    title: "Flix"
+    excerpt: "A interface into public database of movies streaming now."
+    url: "https://github.com/JustinBLDang/CodePath/tree/main/Flix"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: assets/images/Preview-Parstagram.png
+    image_caption: "2022"
+    alt: "Instagram App"
+    title: "Parstagram"
+    excerpt: "An Instagram app using Parse SDK"
+    url: "https://github.com/JustinBLDang/CodePath/tree/main/Parstagram"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: assets/images/Preview-Twitter.png
+    image_caption: "2022"
+    alt: "Twitter"
+    title: "Twitter Viewer"
+    excerpt: "A IOS viewer app for Twitter"
+    url: "https://github.com/JustinBLDang/CodePath/tree/main/Twitter"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+    
 
 GameFeatureRow:
   - image_path: assets/images/Preview-Game-Handy-Dandy.png
